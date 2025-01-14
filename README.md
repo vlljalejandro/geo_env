@@ -1,1 +1,1 @@
-Code for the geo_env course
+Repository for the geo_env course
