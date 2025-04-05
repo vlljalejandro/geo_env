@@ -183,7 +183,7 @@ plt.show()
 # --- Validation 2002 (k = 0.509) ---
 Index2_best = np.empty([1 , 5]) 
 Q2_sim_best = simulate_runoff(best_k, P2, ET2)
-PerfIndex2_best = kge(Q_obs, Q2_sim_best)
+PerfIndex2_best = kge(Q_obs2, Q2_sim_best)
 Index2_best[0,0] = best_k
 Index2_best[0,1:] = PerfIndex2_best #for k, kge, r, alpha, beta
 print (f'Validation 2002 (k = 0.509) → {Index2_best}')
@@ -191,7 +191,7 @@ print (f'Validation 2002 (k = 0.509) → {Index2_best}')
 # Plot Q_obs and Q_sim against time 2002 (k = 0.509)
 time = np.arange(len(P2))
 plt.figure(figsize=(12, 6))
-plt.plot(time, Q_obs, label='Observed Runoff (mm)', color='green')
+plt.plot(time, Q_obs2, label='Observed Runoff (mm)', color='green')
 plt.plot(time, Q2_sim_best, label='Simulated Runoff (mm)', linestyle='--')
 plt.xticks(np.arange(0, len(P), 730), ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
 plt.xlim(0, len(P))
